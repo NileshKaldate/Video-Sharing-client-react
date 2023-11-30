@@ -1,0 +1,7 @@
+.navbar {
+  @apply fixed top-0 border border-gray-50 w-full px-8 py-2 flex justify-between;
+}
+
+.app-container {
+  @apply px-8 py-2;
+}
