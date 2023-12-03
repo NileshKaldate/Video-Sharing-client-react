@@ -1,8 +1,10 @@
-import { ReactElement, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Outlet } from "react-router-dom";
 import AppLogo from "../../assets/icons/AppLogo";
 import "./Layout.css";
+import Hamburger from "../buttons/Hamburger";
 
-const Layout = (props: { children: ReactElement }) => {
+const Layout = () => {
   const navRef: React.LegacyRef<HTMLElement> = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
 
@@ -13,13 +15,14 @@ const Layout = (props: { children: ReactElement }) => {
   return (
     <div>
       <nav className="navbar" id={"navbar"} ref={navRef}>
+        <Hamburger />
         <AppLogo />
         <input />
         <img />
       </nav>
       {navHeight ? (
         <div className="app-container" style={{ marginTop: navHeight }}>
-          {props.children}
+          <Outlet />
         </div>
       ) : (
         <></>
