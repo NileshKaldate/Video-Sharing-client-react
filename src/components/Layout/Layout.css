@@ -1,7 +1,11 @@
 .navbar {
-  @apply fixed top-0 border border-gray-50 w-full px-8 py-2 flex justify-between items-center;
+  @apply fixed bg-[#0f0f0f] top-0 border border-gray-50 w-full px-8 py-2 flex justify-between items-center z-10;
 }
 
 .app-container {
   @apply px-8 py-2;
+}
+
+.sidebar-container {
+  @apply top-0 fixed border border-red-600 h-[100vh] w-60 overflow-y-scroll;
 }

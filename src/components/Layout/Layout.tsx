@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import AppLogo from "../../assets/icons/AppLogo";
 import "./Layout.css";
 import Hamburger from "../buttons/Hamburger";
+import Sidebar from "./Sidebar";
 
 const Layout = () => {
   const navRef: React.LegacyRef<HTMLElement> = useRef(null);
@@ -20,13 +21,14 @@ const Layout = () => {
         <input />
         <img />
       </nav>
-      {navHeight ? (
-        <div className="app-container" style={{ marginTop: navHeight }}>
-          <Outlet />
-        </div>
-      ) : (
-        <></>
-      )}
+      <div className="flex fixed">
+        <Sidebar />
+        {navHeight && (
+          <section className="app-container" style={{ marginTop: navHeight }}>
+            <Outlet />
+          </section>
+        )}
+      </div>
     </div>
   );
 };
