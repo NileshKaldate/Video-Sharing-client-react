@@ -1,5 +1,5 @@
 .navbar {
-  @apply fixed bg-[#0f0f0f] top-0 border border-gray-50 w-full px-6 py-2;
+  @apply fixed bg-[#0f0f0f] top-0 border border-gray-50 w-full px-4 py-2;
   @apply flex justify-between items-center z-10;
 }
 
