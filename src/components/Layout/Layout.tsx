@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import AppBar from "./AppBar";
-import "./Layout.css";
-import Sidebar from "./Sidebar";
+import AppBar from "./AppBar/AppBar";
+import Sidebar from "./SideBar/SideBar";
 
 const Layout = () => {
   const [navHeight, setNavHeight] = useState(0);
@@ -10,10 +9,10 @@ const Layout = () => {
   return (
     <div>
       <AppBar {...{ setNavHeight }} />
-      <div className="flex fixed">
-        <Sidebar />
+      <div className="flex fixed ">
+        <Sidebar {...{ navHeight }} />
         <div
-          className={`app-container ${navHeight ? "block" : "hidden"} `}
+          className={`px-8 py-6 ${navHeight ? "block" : "hidden"} `}
           style={{
             marginTop: navHeight,
           }}

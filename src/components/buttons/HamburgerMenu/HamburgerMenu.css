@@ -1,0 +1,8 @@
+.hamburger {
+  @apply cursor-pointer flex flex-col gap-[5px];
+  @apply w-10 px-3 py-3 hover:bg-hover-bg rounded-[50%];
+}
+
+.bar {
+  @apply h-[1px] bg-white;
+}

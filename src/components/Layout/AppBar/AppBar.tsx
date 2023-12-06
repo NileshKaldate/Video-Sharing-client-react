@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import AppLogo from "../../assets/icons/AppLogo";
-import Hamburger from "../buttons/Hamburger";
-import "./Layout.css";
+import AppLogo from "../../../assets/icons/AppLogo";
+import HamburgerMenu from "../../buttons/HamburgerMenu/HamburgerMenu";
+import "./AppBar.css";
 
 interface AppBarProps {
   setNavHeight: (value: number) => void;
@@ -15,7 +15,7 @@ const AppBar = (props: AppBarProps) => {
   return (
     <nav className="navbar" ref={navRef}>
       <div className="flex gap-4 items-center">
-        <Hamburger />
+        <HamburgerMenu />
         <AppLogo />
       </div>
       <input />
