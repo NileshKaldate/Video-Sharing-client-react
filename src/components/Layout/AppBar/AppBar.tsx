@@ -18,7 +18,6 @@ const AppBar = (props: AppBarProps) => {
         <HamburgerMenu />
         <AppLogo />
       </div>
-      <input />
       <img />
     </nav>
   );
